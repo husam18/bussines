@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact cleanwebsite.nl to discuss your website or digital project.">
+  <meta name="theme-color" content="#f6f4ef">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <title>Contact — cleanwebsite.nl</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai-chat.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .language-select {
+      padding: 9px 30px 9px 12px;
+      border: 1px solid #deded5;
+      border-radius: 10px;
+      background: #fff;
+      font: inherit;
+    }
+
+    body[dir="rtl"] {
+      text-align: right;
+    }
+
+    body[dir="rtl"] .language-select {
+      direction: rtl;
+    }
+  </style>
+  <link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="cleanwebsite.nl home">
+
+        <span class="logo-mark" aria-hidden="true">C</span>
+        cleanwebsite.nl
+      </a>
+        <link rel="icon" type="image/png" href="/favicon.png">
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="services.html" data-i18n="services">Services</a></li>
+          <li><a href="pricing.html" data-i18n="pricing">Pricing</a></li>
+          <li><a href="portfolio.html" data-i18n="portfolio">Portfolio</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a class="nav-cta" href="contact.html" aria-current="page" data-i18n="contact">Contact</a></li>
+          <li class="nav-language">
+            <label>
+              <span class="language-label" data-i18n="language">Language</span>
+              <select class="language-select" id="language-select" aria-label="Choose language">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+                <option value="ar">العربية</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+                <option value="zh">中文</option>
+              </select>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <p class="eyebrow" data-i18n="heroEyebrow">Start a conversation</p>
+      <h1>
+        <span data-i18n="heroTitle">Tell us what you’re</span>
+        <em data-i18n="heroEm">working on.</em>
+      </h1>
+      <p class="page-intro" data-i18n="heroIntro">
+        Share a little about your business and what you need. We’ll review your
+        message and follow up about possible next steps.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <aside class="contact-intro" aria-labelledby="contact-heading">
+          <p class="eyebrow" data-i18n="contactEyebrow">Get in touch</p>
+          <h2 id="contact-heading" data-i18n="contactTitle">Let’s find the right next step.</h2>
+          <p data-i18n="contactText">
+            Not sure exactly what you need? That’s okay. Tell us where you are
+            and what you’re hoping to achieve.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <span class="contact-label" data-i18n="emailLabel">Email</span>
+              <a href="mailto:husam48726@gmail.com">husam48726@gmail.com</a>
+            </div>
+            <div>
+              <span class="contact-label" data-i18n="phoneLabel">Phone</span>
+              <a href="tel:+31643190569">+31643190569</a>
+            </div>
+            <div>
+              <span class="contact-label" data-i18n="priceLabel">Starting price</span>
+              <p data-i18n="priceText">Website packages start at €500.</p>
+            </div>
+            <div>
+              <span class="contact-label" data-i18n="helpfulLabel">Helpful details to include</span>
+              <p data-i18n="helpfulText">Your preferred timeline, budget, and any features you have in mind.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="contact-form-wrap">
+          <h2 data-i18n="formTitle">Project enquiry</h2>
+          <p class="form-intro" data-i18n="requiredNote">Fields marked with * are required.</p>
+
+          <!-- This demo uses mailto and opens the visitor's email application.
+               Use a form service or server-side handler for online submissions. -->
+          <form
+            class="contact-form"
+            action="mailto:husam48726@gmail.com"
+            method="post"
+            enctype="text/plain">
+
+            <div class="form-row">
+              <label for="name">
+                <span data-i18n="nameLabel">Your name</span> <span aria-hidden="true">*</span>
+                <input
+                  id="name"
+                  type="text"
+                  name="Name"
+                  autocomplete="name"
+                  required>
+              </label>
+
+              <label for="email">
+                <span data-i18n="emailAddressLabel">Email address</span> <span aria-hidden="true">*</span>
+                <input
+                  id="email"
+                  type="email"
+                  name="Email"
+                  autocomplete="email"
+                  required>
+              </label>
+            </div>
+
+            <label for="service" data-i18n="serviceLabel">What do you need help with?</label>
+            <select id="service" name="Service">
+              <option value="" data-i18n="servicePlaceholder">Choose a service</option>
+              <option value="Website design or development" data-i18n="serviceWebsite">Website design or development</option>
+              <option value="SEO setup" data-i18n="serviceSEO">SEO setup</option>
+              <option value="Digital marketing" data-i18n="serviceMarketing">Digital marketing</option>
+              <option value="E-commerce website" data-i18n="serviceEcommerce">E-commerce website</option>
+              <option value="Website support" data-i18n="serviceSupport">Website support</option>
+              <option value="Something else" data-i18n="serviceOther">Something else</option>
+            </select>
+
+            <label for="budget" data-i18n="budgetLabel">Estimated budget</label>
+            <select id="budget" name="Estimated budget">
+              <option value="" data-i18n="budgetPlaceholder">Choose a range</option>
+              <option value="€500–€1,000">€500–€1,000</option>
+              <option value="€1,000–€2,000">€1,000–€2,000</option>
+              <option value="€2,000+">€2,000+</option>
+              <option value="Not sure yet" data-i18n="budgetUnsure">I’m not sure yet</option>
+            </select>
+
+            <label for="timeline" data-i18n="timelineLabel">When would you like to get started?</label>
+            <select id="timeline" name="Preferred timeline">
+              <option value="" data-i18n="timelinePlaceholder">Choose a timeframe</option>
+              <option value="As soon as possible" data-i18n="timelineASAP">As soon as possible</option>
+              <option value="Within 1–2 months" data-i18n="timelineMonths">Within 1–2 months</option>
+              <option value="Later this year" data-i18n="timelineLater">Later this year</option>
+              <option value="Just exploring" data-i18n="timelineExploring">I’m just exploring</option>
+            </select>
+
+            <label for="message">
+              <span data-i18n="messageLabel">Tell us about your project</span> <span aria-hidden="true">*</span>
+              <textarea
+                id="message"
+                name="Project details"
+                rows="6"
+                required
+                data-i18n-placeholder="messagePlaceholder"
+                placeholder="What does your business do, and what would you like the website to help you achieve?"></textarea>
+            </label>
+
+            <p class="form-help" data-i18n="formHelp">
+              This demo form opens your email application. To receive enquiries
+              directly through the website, connect a form service or backend.
+            </p>
+
+            <button class="button" type="submit">
+              <span data-i18n="submitButton">Prepare email</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow" data-i18n="ctaEyebrow">Prefer email?</p>
+          <h2>
+            <span data-i18n="ctaTitle1">We’re one message</span><br>
+            <span data-i18n="ctaTitle2">away.</span>
+          </h2>
+        </div>
+        <a class="button button-light" href="mailto:husam48726@gmail.com">
+          <span data-i18n="ctaButton">Email the studio</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <a class="logo" href="index.html" aria-label="cleanwebsite.nl home">
+          <span class="logo-mark" aria-hidden="true">C</span>
+          cleanwebsite.nl
+        </a>
+        <p data-i18n="footerText">Websites and digital support for growing businesses.</p>
+      </div>
+      <a class="footer-email" href="mailto:husam48726@gmail.com">husam48726@gmail.com</a>
+      <a class="footer-email" href="tel:+31643190569">+31643190569</a>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> cleanwebsite.nl.</span>
+      <nav aria-label="Footer navigation">
+        <a href="services.html" data-i18n="services">Services</a>
+        <a href="pricing.html" data-i18n="pricing">Pricing</a>
+        <a href="portfolio.html" data-i18n="portfolio">Portfolio</a>
+        <a href="about.html" data-i18n="about">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        skip:"Skip to content", language:"Language", home:"Home", services:"Services", pricing:"Pricing", portfolio:"Portfolio", about:"About", contact:"Contact",
+        heroEyebrow:"Start a conversation", heroTitle:"Tell us what you’re", heroEm:"working on.",
+        heroIntro:"Share a little about your business and what you need. We’ll review your message and follow up about possible next steps.",
+        contactEyebrow:"Get in touch", contactTitle:"Let’s find the right next step.",
+        contactText:"Not sure exactly what you need? That’s okay. Tell us where you are and what you’re hoping to achieve.",
+        emailLabel:"Email", phoneLabel:"Phone", priceLabel:"Starting price", priceText:"Website packages start at €500.",
+        helpfulLabel:"Helpful details to include", helpfulText:"Your preferred timeline, budget, and any features you have in mind.",
+        formTitle:"Project enquiry", requiredNote:"Fields marked with * are required.", nameLabel:"Your name", emailAddressLabel:"Email address",
+        serviceLabel:"What do you need help with?", servicePlaceholder:"Choose a service", serviceWebsite:"Website design or development",
+        serviceSEO:"SEO setup", serviceMarketing:"Digital marketing", serviceEcommerce:"E-commerce website", serviceSupport:"Website support", serviceOther:"Something else",
+        budgetLabel:"Estimated budget", budgetPlaceholder:"Choose a range", budgetUnsure:"I’m not sure yet",
+        timelineLabel:"When would you like to get started?", timelinePlaceholder:"Choose a timeframe", timelineASAP:"As soon as possible",
+        timelineMonths:"Within 1–2 months", timelineLater:"Later this year", timelineExploring:"I’m just exploring",
+        messageLabel:"Tell us about your project", messagePlaceholder:"What does your business do, and what would you like the website to help you achieve?",
+        formHelp:"This demo form opens your email application. To receive enquiries directly through the website, connect a form service or backend.",
+        submitButton:"Prepare email", ctaEyebrow:"Prefer email?", ctaTitle1:"We’re one message", ctaTitle2:"away.", ctaButton:"Email the studio",
+        footerText:"Websites and digital support for growing businesses."
+      },
+
+      nl: {
+        skip:"Ga naar de inhoud", language:"Taal", home:"Home", services:"Diensten", pricing:"Prijzen", portfolio:"Portfolio", about:"Over ons", contact:"Contact",
+        heroEyebrow:"Neem contact op", heroTitle:"Vertel ons waar je", heroEm:"aan werkt.",
+        heroIntro:"Vertel iets over je bedrijf en wat je nodig hebt. We bekijken je bericht en nemen contact met je op over mogelijke vervolgstappen.",
+        contactEyebrow:"Neem contact op", contactTitle:"Laten we de juiste volgende stap vinden.",
+        contactText:"Weet je nog niet precies wat je nodig hebt? Geen probleem. Vertel ons waar je staat en wat je wilt bereiken.",
+        emailLabel:"E-mail", phoneLabel:"Telefoon", priceLabel:"Vanafprijs", priceText:"Websitepakketten beginnen bij €500.",
+        helpfulLabel:"Handig om te vermelden", helpfulText:"Je gewenste planning, budget en eventuele functies die je in gedachten hebt.",
+        formTitle:"Projectaanvraag", requiredNote:"Velden met een * zijn verplicht.", nameLabel:"Je naam", emailAddressLabel:"E-mailadres",
+        serviceLabel:"Waarmee kunnen we je helpen?", servicePlaceholder:"Kies een dienst", serviceWebsite:"Websiteontwerp of -ontwikkeling",
+        serviceSEO:"SEO-instellingen", serviceMarketing:"Digitale marketing", serviceEcommerce:"Webshop", serviceSupport:"Websiteondersteuning", serviceOther:"Iets anders",
+        budgetLabel:"Geschat budget", budgetPlaceholder:"Kies een bedrag", budgetUnsure:"Ik weet het nog niet",
+        timelineLabel:"Wanneer wil je beginnen?", timelinePlaceholder:"Kies een periode", timelineASAP:"Zo snel mogelijk",
+        timelineMonths:"Binnen 1–2 maanden", timelineLater:"Later dit jaar", timelineExploring:"Ik ben me nog aan het oriënteren",
+        messageLabel:"Vertel ons over je project", messagePlaceholder:"Wat doet je bedrijf en wat wil je met de website bereiken?",
+        formHelp:"Dit demoformulier opent je e-mailprogramma. Koppel een formulierdienst of backend om aanvragen rechtstreeks via de website te ontvangen.",
+        submitButton:"E-mail voorbereiden", ctaEyebrow:"Liever e-mail?", ctaTitle1:"We zijn maar één bericht", ctaTitle2:"van je verwijderd.", ctaButton:"E-mail het studio",
+        footerText:"Websites en digitale ondersteuning voor groeiende bedrijven."
+      },
+
+      de: {
+        skip:"Zum Inhalt springen", language:"Sprache", home:"Startseite", services:"Leistungen", pricing:"Preise", portfolio:"Portfolio", about:"Über uns", contact:"Kontakt",
+        heroEyebrow:"Kontakt aufnehmen", heroTitle:"Erzählen Sie uns, woran", heroEm:"Sie arbeiten.",
+        heroIntro:"Erzählen Sie uns etwas über Ihr Unternehmen und Ihren Bedarf. Wir prüfen Ihre Nachricht und melden uns mit möglichen nächsten Schritten.",
+        contactEyebrow:"Kontakt", contactTitle:"Lassen Sie uns den passenden nächsten Schritt finden.",
+        contactText:"Sie wissen noch nicht genau, was Sie brauchen? Kein Problem. Erzählen Sie uns, wo Sie stehen und was Sie erreichen möchten.",
+        emailLabel:"E-Mail", phoneLabel:"Telefon", priceLabel:"Einstiegspreis", priceText:"Website-Pakete beginnen bei 500 €.",
+        helpfulLabel:"Hilfreiche Angaben", helpfulText:"Ihr gewünschter Zeitplan, Ihr Budget und gewünschte Funktionen.",
+        formTitle:"Projektanfrage", requiredNote:"Mit * markierte Felder sind Pflichtfelder.", nameLabel:"Ihr Name", emailAddressLabel:"E-Mail-Adresse",
+        serviceLabel:"Wobei benötigen Sie Unterstützung?", servicePlaceholder:"Leistung auswählen", serviceWebsite:"Website-Design oder -Entwicklung",
+        serviceSEO:"SEO-Einrichtung", serviceMarketing:"Digitales Marketing", serviceEcommerce:"E-Commerce-Website", serviceSupport:"Website-Support", serviceOther:"Etwas anderes",
+        budgetLabel:"Geschätztes Budget", budgetPlaceholder:"Bereich auswählen", budgetUnsure:"Ich bin mir noch nicht sicher",
+        timelineLabel:"Wann möchten Sie starten?", timelinePlaceholder:"Zeitraum auswählen", timelineASAP:"So bald wie möglich",
+        timelineMonths:"Innerhalb von 1–2 Monaten", timelineLater:"Später in diesem Jahr", timelineExploring:"Ich informiere mich erst einmal",
+        messageLabel:"Erzählen Sie uns von Ihrem Projekt", messagePlaceholder:"Was macht Ihr Unternehmen und was soll Ihre Website erreichen?",
+        formHelp:"Dieses Demoformular öffnet Ihr E-Mail-Programm. Für Anfragen direkt über die Website benötigen Sie einen Formulardienst oder ein Backend.",
+        submitButton:"E-Mail vorbereiten", ctaEyebrow:"Lieber per E-Mail?", ctaTitle1:"Wir sind nur eine Nachricht", ctaTitle2:"entfernt.", ctaButton:"Studio per E-Mail kontaktieren",
+        footerText:"Websites und digitale Unterstützung für wachsende Unternehmen."
+      },
+
+      fr: {
+        skip:"Aller au contenu", language:"Langue", home:"Accueil", services:"Services", pricing:"Tarifs", portfolio:"Portfolio", about:"À propos", contact:"Contact",
+        heroEyebrow:"Commençons à échanger", heroTitle:"Parlez-nous de ce sur", heroEm:"quoi vous travaillez.",
+        heroIntro:"Présentez-nous votre activité et vos besoins. Nous examinerons votre message et vous répondrons pour discuter des prochaines étapes possibles.",
+        contactEyebrow:"Nous contacter", contactTitle:"Trouvons ensemble la prochaine étape.",
+        contactText:"Vous ne savez pas exactement ce dont vous avez besoin ? Aucun problème. Dites-nous où vous en êtes et ce que vous souhaitez accomplir.",
+        emailLabel:"E-mail", phoneLabel:"Téléphone", priceLabel:"Tarif de départ", priceText:"Les offres de création de site commencent à 500 €.",
+        helpfulLabel:"Informations utiles", helpfulText:"Votre calendrier souhaité, votre budget et les fonctionnalités envisagées.",
+        formTitle:"Demande de projet", requiredNote:"Les champs marqués d’un * sont obligatoires.", nameLabel:"Votre nom", emailAddressLabel:"Adresse e-mail",
+        serviceLabel:"De quelle aide avez-vous besoin ?", servicePlaceholder:"Choisissez un service", serviceWebsite:"Conception ou développement de site web",
+        serviceSEO:"Mise en place du SEO", serviceMarketing:"Marketing numérique", serviceEcommerce:"Site e-commerce", serviceSupport:"Assistance pour site web", serviceOther:"Autre demande",
+        budgetLabel:"Budget estimé", budgetPlaceholder:"Choisissez une fourchette", budgetUnsure:"Je ne sais pas encore",
+        timelineLabel:"Quand souhaitez-vous commencer ?", timelinePlaceholder:"Choisissez une période", timelineASAP:"Dès que possible",
+        timelineMonths:"Dans 1 à 2 mois", timelineLater:"Plus tard cette année", timelineExploring:"Je me renseigne simplement",
+        messageLabel:"Parlez-nous de votre projet", messagePlaceholder:"Quelle est l’activité de votre entreprise et que souhaitez-vous accomplir avec le site ?",
+        formHelp:"Ce formulaire de démonstration ouvre votre application de messagerie. Pour recevoir les demandes directement sur le site, connectez un service de formulaire ou un serveur.",
+        submitButton:"Préparer l’e-mail", ctaEyebrow:"Vous préférez l’e-mail ?", ctaTitle1:"Nous sommes à un message", ctaTitle2:"de distance.", ctaButton:"Écrire au studio",
+        footerText:"Sites web et accompagnement numérique pour les entreprises en croissance."
+      },
+
+      zh: {
+        skip:"跳转到正文", language:"语言", home:"首页", services:"服务", pricing:"价格", portfolio:"作品集", about:"关于", contact:"联系",
+        heroEyebrow:"开始沟通", heroTitle:"告诉我们您正在", heroEm:"做什么项目。",
+        heroIntro:"简单介绍您的业务和需求。我们会查看您的留言，并回复您可能的下一步方案。",
+        contactEyebrow:"联系我们", contactTitle:"一起找到合适的下一步。",
+        contactText:"还不确定具体需要什么？没关系。告诉我们您目前的情况以及希望实现的目标。",
+        emailLabel:"电子邮箱", phoneLabel:"电话", priceLabel:"起步价格", priceText:"网站套餐价格从 500 欧元起。",
+        helpfulLabel:"建议提供的信息", helpfulText:"您期望的时间安排、预算以及考虑中的功能。",
+        formTitle:"项目咨询", requiredNote:"带 * 的字段为必填项。", nameLabel:"您的姓名", emailAddressLabel:"电子邮箱地址",
+        serviceLabel:"您需要什么帮助？", servicePlaceholder:"选择服务", serviceWebsite:"网站设计或开发",
+        serviceSEO:"SEO 设置", serviceMarketing:"数字营销", serviceEcommerce:"电子商务网站", serviceSupport:"网站维护支持", serviceOther:"其他",
+        budgetLabel:"预计预算", budgetPlaceholder:"选择范围", budgetUnsure:"暂时不确定",
+        timelineLabel:"您希望什么时候开始？", timelinePlaceholder:"选择时间范围", timelineASAP:"尽快开始",
+        timelineMonths:"1 至 2 个月内", timelineLater:"今年晚些时候", timelineExploring:"目前只是了解一下",
+        messageLabel:"介绍一下您的项目", messagePlaceholder:"您的业务是什么？您希望网站帮助实现什么目标？",
+        formHelp:"此演示表单会打开您的电子邮件应用。如需直接通过网站接收咨询，请连接表单服务或后端程序。",
+        submitButton:"准备电子邮件", ctaEyebrow:"更喜欢发邮件？", ctaTitle1:"只需发送一条消息", ctaTitle2:"即可联系到我们。", ctaButton:"给工作室发邮件",
+        footerText:"为成长中的企业提供网站和数字支持。"
+      },
+
+      ar: {
+        skip:"انتقل إلى المحتوى", language:"اللغة", home:"الرئيسية", services:"الخدمات", pricing:"الأسعار", portfolio:"الأعمال", about:"من نحن", contact:"اتصل بنا",
+        heroEyebrow:"لنبدأ الحديث", heroTitle:"أخبرنا عن المشروع الذي", heroEm:"تعمل عليه.",
+        heroIntro:"شاركنا نبذة عن نشاطك وما تحتاج إليه. سنراجع رسالتك ونتواصل معك لمناقشة الخطوات التالية الممكنة.",
+        contactEyebrow:"تواصل معنا", contactTitle:"لنعثر على الخطوة التالية المناسبة.",
+        contactText:"لست متأكدًا مما تحتاج إليه؟ لا بأس. أخبرنا عن وضعك الحالي وما تأمل في تحقيقه.",
+        emailLabel:"البريد الإلكتروني", phoneLabel:"الهاتف", priceLabel:"السعر الابتدائي", priceText:"تبدأ باقات المواقع من 500 يورو.",
+        helpfulLabel:"معلومات مفيدة لإضافتها", helpfulText:"الجدول الزمني الذي تفضله والميزانية والميزات التي تفكر فيها.",
+        formTitle:"استفسار عن مشروع", requiredNote:"الحقول التي تحمل علامة * مطلوبة.", nameLabel:"اسمك", emailAddressLabel:"عنوان البريد الإلكتروني",
+        serviceLabel:"ما نوع المساعدة التي تحتاج إليها؟", servicePlaceholder:"اختر خدمة", serviceWebsite:"تصميم أو تطوير موقع إلكتروني",
+        serviceSEO:"إعداد تحسين محركات البحث", serviceMarketing:"التسويق الرقمي", serviceEcommerce:"متجر إلكتروني", serviceSupport:"دعم الموقع", serviceOther:"شيء آخر",
+        budgetLabel:"الميزانية التقديرية", budgetPlaceholder:"اختر نطاقًا", budgetUnsure:"لست متأكدًا بعد",
+        timelineLabel:"متى ترغب في البدء؟", timelinePlaceholder:"اختر إطارًا زمنيًا", timelineASAP:"في أقرب وقت ممكن",
+        timelineMonths:"خلال شهر إلى شهرين", timelineLater:"في وقت لاحق من هذا العام", timelineExploring:"ما زلت أستكشف الخيارات",
+        messageLabel:"أخبرنا عن مشروعك", messagePlaceholder:"ما طبيعة نشاطك التجاري، وما الذي ترغب أن يساعدك الموقع على تحقيقه؟",
+        formHelp:"يفتح نموذج العرض هذا تطبيق البريد الإلكتروني لديك. لاستقبال الاستفسارات مباشرة عبر الموقع، اربط خدمة نماذج أو نظامًا خلفيًا.",
+        submitButton:"تحضير البريد الإلكتروني", ctaEyebrow:"تفضل البريد الإلكتروني؟", ctaTitle1:"نحن على بُعد رسالة", ctaTitle2:"واحدة منك.", ctaButton:"راسل الاستوديو",
+        footerText:"مواقع إلكترونية ودعم رقمي للشركات النامية."
+      }
+    };
+
+    const selector = document.getElementById("language-select");
+
+    function setLanguage(language) {
+      const selectedTranslations = translations[language] || translations.en;
+
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+      document.body.dir = language === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.dataset.i18n;
+        if (selectedTranslations[key]) {
+          element.textContent = selectedTranslations[key];
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+        const key = element.dataset.i18nPlaceholder;
+        if (selectedTranslations[key]) {
+          element.placeholder = selectedTranslations[key];
+        }
+      });
+
+      selector.value = language;
+      localStorage.setItem("site-language", language);
+    }
+
+    selector.addEventListener("change", event => {
+      setLanguage(event.target.value);
+    });
+
+    document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+    const savedLanguage = localStorage.getItem("site-language") || "en";
+    setLanguage(savedLanguage);
+  </script>
+
+  <script src="ai-chat.js" defer></script>
+</body>
+</html>

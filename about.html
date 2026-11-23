@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet cleanwebsite.nl, a thoughtful website design and development partner for small businesses.">
+  <meta name="theme-color" content="#f6f4ef">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>About — cleanwebsite.nl</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #fff;
+      --text: #22251f;
+      --muted: #666b62;
+      --accent: #315846;
+      --border: #deded5;
+      --radius: 18px;
+      --container: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+    h3 { font-size: 1.15rem; }
+
+    a { color: inherit; }
+    .container { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+    .section { padding: 76px 0; }
+    .surface-section { background: #eeece5; }
+    .eyebrow { color: var(--accent); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .skip-link { position: absolute; left: -999px; top: 0; }
+    .skip-link:focus { left: 12px; top: 12px; z-index: 10; background: white; padding: 10px; }
+
+    .site-header { border-bottom: 1px solid var(--border); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; text-decoration: none; }
+    .logo-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: white; }
+    .nav-links { display: flex; align-items: center; gap: 22px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; font-size: .94rem; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent); }
+    .nav-cta, .button { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; background: var(--accent); color: white; text-decoration: none; font-weight: 700; }
+    .language-select { padding: 9px 30px 9px 12px; border: 1px solid var(--border); border-radius: 10px; background: white; font: inherit; }
+
+    .page-hero { padding-block: 76px 50px; }
+    .page-hero h1 { max-width: 850px; margin: 14px 0; }
+    .page-hero h1 em { color: var(--accent); }
+    .page-intro, .section-intro { max-width: 650px; color: var(--muted); font-size: 1.1rem; }
+
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
+    .abstract-art { min-height: 430px; position: relative; overflow: hidden; border-radius: 28px; background: radial-gradient(circle at 68% 35%, #d4b98b 0 14%, transparent 15%), radial-gradient(ellipse at 35% 70%, #8ba18c 0 25%, transparent 26%), linear-gradient(135deg, #d8d2c3, #b5c1b1); }
+    .art-badge { position: absolute; left: 22px; bottom: 22px; padding: 10px 14px; border-radius: 999px; background: white; font-size: .75rem; font-weight: 700; letter-spacing: .1em; }
+    .split-copy p:not(.eyebrow) { color: var(--muted); }
+    .button { margin-top: 14px; }
+
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+    .section-heading h2 { margin-bottom: 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .value-card { padding: 26px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .value-card > span, .process-list article > span { color: var(--accent); font-weight: 700; }
+    .value-card p, .process-list p, .about-faq p { color: var(--muted); }
+
+    .process-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 75px; }
+    .process-list article { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .process-list h3 { margin: 0 0 6px; }
+    .process-list p { margin: 0; }
+
+    .about-faq { max-width: 820px; }
+    .about-faq details { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .about-faq summary { cursor: pointer; font-weight: 700; }
+
+    .cta { padding: 70px 0; background: var(--accent); color: white; }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .cta .eyebrow, .cta p { color: #e1ebe2; }
+    .cta h2 { margin: 10px 0; }
+    .button-light { background: white; color: var(--accent); }
+
+    .site-footer { padding: 38px 0 22px; }
+    .footer-top, .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .footer-top { padding-bottom: 30px; border-bottom: 1px solid var(--border); }
+    .footer-top p { color: var(--muted); }
+    .footer-email { text-decoration: none; }
+    .footer-bottom { padding-top: 20px; color: var(--muted); font-size: .9rem; }
+    .footer-bottom nav { display: flex; gap: 18px; }
+    .footer-bottom nav a { text-decoration: none; }
+
+    @media (max-width: 800px) {
+      .nav { flex-wrap: wrap; padding-block: 14px; }
+      .nav-links { order: 3; width: 100%; flex-wrap: wrap; gap: 14px; }
+      .split-grid, .process-grid { grid-template-columns: 1fr; gap: 35px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .section-heading, .cta-inner, .footer-top, .footer-bottom { align-items: flex-start; flex-direction: column; }
+      .abstract-art { min-height: 300px; }
+    }
+
+    body[dir="rtl"] { text-align: right; }
+    body[dir="rtl"] .logo-mark { order: 1; }
+    body[dir="rtl"] .process-list article { flex-direction: row-reverse; }
+    body[dir="rtl"] .art-badge { left: auto; right: 22px; }
+  </style>
+  <link rel="stylesheet" href="mobile-nav.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="cleanwebsite.nl home">
+
+        <span class="logo-mark" aria-hidden="true">C</span>
+        cleanwebsite.nl
+      </a>
+        <link rel="icon" type="image/png" href="/favicon.png">
+
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation"
+        aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span>
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="services.html" data-i18n="services">Services</a></li>
+          <li><a href="pricing.html" data-i18n="pricing">Pricing</a></li>
+          <li><a href="portfolio.html" data-i18n="portfolio">Portfolio</a></li>
+          <li><a href="about.html" aria-current="page" data-i18n="about">About</a></li>
+          <li><a class="nav-cta" href="contact.html" data-i18n="contact">Contact</a></li>
+          <li class="nav-language">
+            <label>
+              <span class="language-label" data-i18n="language">Language</span>
+              <select class="language-select" id="language-select" aria-label="Choose language">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+                <option value="ar">العربية</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+                <option value="zh">中文</option>
+              </select>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <p class="eyebrow" data-i18n="heroEyebrow">About the studio</p>
+      <h1><span data-i18n="heroTitle">Good work starts</span> <em data-i18n="heroEm">with listening.</em></h1>
+      <p class="page-intro" data-i18n="heroIntro">We help small businesses build a confident online presence through clear website design, thoughtful development, and practical digital support.</p>
+    </section>
+
+    <section class="section">
+      <div class="container split-grid">
+        <div class="abstract-art" role="img" data-i18n-aria="artAlt" aria-label="Abstract illustration in natural muted colors">
+          <span class="art-badge" data-i18n="artBadge">THOUGHTFUL BY DESIGN</span>
+        </div>
+
+        <div class="split-copy">
+          <p class="eyebrow" data-i18n="aboutEyebrow">A small studio, a personal approach</p>
+          <h2 data-i18n="aboutTitle">Useful, well-made websites—without the extra fuss.</h2>
+          <p data-i18n="aboutText1">A website should help people understand what you do and make it easy for them to take the next step. We bring design and development together to create websites that are clear, considered, and suited to your business.</p>
+          <p data-i18n="aboutText2">We keep communication straightforward, agree on the scope before work begins, and involve you at the important stages. That way, there are fewer surprises and a clearer path from first idea to launch.</p>
+          <a class="button" href="contact.html"><span data-i18n="projectLink">Tell us about your project</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface-section" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="valuesEyebrow">What matters to us</p>
+            <h2 id="values-heading" data-i18n="valuesTitle">Good process. Honest work.</h2>
+          </div>
+          <p class="section-intro" data-i18n="valuesIntro">The best project is one where priorities are clear and expectations are agreed from the start.</p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card"><span>01</span><h3 data-i18n="valueTitle1">Clarity over jargon</h3><p data-i18n="valueText1">We explain decisions and deliverables in plain language, so you can make informed choices about your website.</p></article>
+          <article class="value-card"><span>02</span><h3 data-i18n="valueTitle2">Designed for real people</h3><p data-i18n="valueText2">We focus on accessible, responsive experiences that help visitors find information and take action.</p></article>
+          <article class="value-card"><span>03</span><h3 data-i18n="valueTitle3">Realistic expectations</h3><p data-i18n="valueText3">We agree on the work and its limits. We don’t promise guaranteed rankings, leads, or sales.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" aria-labelledby="process-heading">
+      <div class="container process-grid">
+        <div>
+          <p class="eyebrow" data-i18n="processEyebrow">Our process</p>
+          <h2 id="process-heading" data-i18n="processTitle">A clear path from idea to launch.</h2>
+          <p class="section-intro" data-i18n="processIntro">You’ll know what’s happening, what we need from you, and what comes next.</p>
+        </div>
+
+        <div class="process-list">
+          <article><span>01</span><div><h3 data-i18n="stepTitle1">Understand</h3><p data-i18n="stepText1">We discuss your business, audience, goals, and budget.</p></div></article>
+          <article><span>02</span><div><h3 data-i18n="stepTitle2">Plan</h3><p data-i18n="stepText2">We agree on the scope, page structure, content needs, and timeline.</p></div></article>
+          <article><span>03</span><div><h3 data-i18n="stepTitle3">Design and build</h3><p data-i18n="stepText3">We share progress, review the work together, and test the website.</p></div></article>
+          <article><span>04</span><div><h3 data-i18n="stepTitle4">Prepare for launch</h3><p data-i18n="stepText4">We complete final checks and help get the agreed work ready to launch.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface-section" aria-labelledby="about-faq-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="faqEyebrow">Good to know</p>
+            <h2 id="about-faq-heading" data-i18n="faqTitle">Working together.</h2>
+          </div>
+        </div>
+
+        <div class="about-faq">
+          <details><summary data-i18n="faqQ1">Who do you work with?</summary><p data-i18n="faqA1">We work with small businesses and independent professionals who need a new website or want to improve an existing one.</p></details>
+          <details><summary data-i18n="faqQ2">Will I know the price before work starts?</summary><p data-i18n="faqA2">Yes. We’ll discuss your needs and provide a written proposal outlining the agreed scope and price before work begins.</p></details>
+          <details><summary data-i18n="faqQ3">Can you help after launch?</summary><p data-i18n="faqA3">Ongoing support can be discussed as a separate service and included in a proposal where suitable.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow" data-i18n="ctaEyebrow">Ready to talk?</p>
+          <h2><span data-i18n="ctaTitle1">Let’s make a plan</span><br><span data-i18n="ctaTitle2">for your website.</span></h2>
+          <p data-i18n="ctaText">Share a little about your project and we’ll take it from there.</p>
+        </div>
+        <a class="button button-light" href="contact.html"><span data-i18n="ctaButton">Contact the studio</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">C</span>cleanwebsite.nl</a>
+        <p data-i18n="footerText">Websites and digital support for growing businesses.</p>
+      </div>
+      <a class="footer-email" href="mailto:husam48726@gmail.com">husam48726@gmail.com</a>
+      <a class="footer-email" href="tel:+31643190569">+31643190569</a>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> cleanwebsite.nl.</span>
+      <nav aria-label="Footer navigation">
+        <a href="services.html" data-i18n="services">Services</a>
+        <a href="pricing.html" data-i18n="pricing">Pricing</a>
+        <a href="portfolio.html" data-i18n="portfolio">Portfolio</a>
+        <a href="contact.html" data-i18n="contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        skip:"Skip to content", language:"Language", home:"Home", services:"Services", pricing:"Pricing", portfolio:"Portfolio", about:"About", contact:"Contact",
+        heroEyebrow:"About the studio", heroTitle:"Good work starts", heroEm:"with listening.", heroIntro:"We help small businesses build a confident online presence through clear website design, thoughtful development, and practical digital support.",
+        artAlt:"Abstract illustration in natural muted colors", artBadge:"THOUGHTFUL BY DESIGN", aboutEyebrow:"A small studio, a personal approach", aboutTitle:"Useful, well-made websites—without the extra fuss.",
+        aboutText1:"A website should help people understand what you do and make it easy for them to take the next step. We bring design and development together to create websites that are clear, considered, and suited to your business.",
+        aboutText2:"We keep communication straightforward, agree on the scope before work begins, and involve you at the important stages. That way, there are fewer surprises and a clearer path from first idea to launch.",
+        projectLink:"Tell us about your project", valuesEyebrow:"What matters to us", valuesTitle:"Good process. Honest work.", valuesIntro:"The best project is one where priorities are clear and expectations are agreed from the start.",
+        valueTitle1:"Clarity over jargon", valueText1:"We explain decisions and deliverables in plain language, so you can make informed choices about your website.",
+        valueTitle2:"Designed for real people", valueText2:"We focus on accessible, responsive experiences that help visitors find information and take action.",
+        valueTitle3:"Realistic expectations", valueText3:"We agree on the work and its limits. We don’t promise guaranteed rankings, leads, or sales.",
+        processEyebrow:"Our process", processTitle:"A clear path from idea to launch.", processIntro:"You’ll know what’s happening, what we need from you, and what comes next.",
+        stepTitle1:"Understand", stepText1:"We discuss your business, audience, goals, and budget.", stepTitle2:"Plan", stepText2:"We agree on the scope, page structure, content needs, and timeline.",
+        stepTitle3:"Design and build", stepText3:"We share progress, review the work together, and test the website.", stepTitle4:"Prepare for launch", stepText4:"We complete final checks and help get the agreed work ready to launch.",
+        faqEyebrow:"Good to know", faqTitle:"Working together.", faqQ1:"Who do you work with?", faqA1:"We work with small businesses and independent professionals who need a new website or want to improve an existing one.",
+        faqQ2:"Will I know the price before work starts?", faqA2:"Yes. We’ll discuss your needs and provide a written proposal outlining the agreed scope and price before work begins.",
+        faqQ3:"Can you help after launch?", faqA3:"Ongoing support can be discussed as a separate service and included in a proposal where suitable.",
+        ctaEyebrow:"Ready to talk?", ctaTitle1:"Let’s make a plan", ctaTitle2:"for your website.", ctaText:"Share a little about your project and we’ll take it from there.", ctaButton:"Contact the studio",
+        footerText:"Websites and digital support for growing businesses."
+      },
+
+      nl: {
+        skip:"Ga naar de inhoud", language:"Taal", home:"Home", services:"Diensten", pricing:"Prijzen", portfolio:"Portfolio", about:"Over ons", contact:"Contact",
+        heroEyebrow:"Over de studio", heroTitle:"Goed werk begint", heroEm:"met luisteren.", heroIntro:"We helpen kleine bedrijven een sterke online aanwezigheid op te bouwen met helder webdesign, zorgvuldige ontwikkeling en praktische digitale ondersteuning.",
+        artAlt:"Abstracte illustratie in natuurlijke, rustige kleuren", artBadge:"MET AANDACHT ONTWORPEN", aboutEyebrow:"Een kleine studio, een persoonlijke aanpak", aboutTitle:"Gebruiksvriendelijke websites, zonder onnodig gedoe.",
+        aboutText1:"Een website moet mensen helpen begrijpen wat je doet en het makkelijk maken om de volgende stap te zetten. Met ontwerp en ontwikkeling samen maken we heldere websites die bij je bedrijf passen.",
+        aboutText2:"We communiceren duidelijk, spreken de werkzaamheden vooraf af en betrekken je op belangrijke momenten. Zo zijn er minder verrassingen en is de weg van eerste idee tot lancering helder.",
+        projectLink:"Vertel ons over je project", valuesEyebrow:"Wat vinden we belangrijk?", valuesTitle:"Een goed proces. Eerlijk werk.", valuesIntro:"Een goed project begint met duidelijke prioriteiten en verwachtingen.",
+        valueTitle1:"Duidelijkheid boven jargon", valueText1:"We leggen keuzes en resultaten uit in begrijpelijke taal, zodat je goed geïnformeerde beslissingen kunt nemen.",
+        valueTitle2:"Ontworpen voor echte mensen", valueText2:"We richten ons op toegankelijke, responsieve websites waarmee bezoekers informatie vinden en actie kunnen ondernemen.",
+        valueTitle3:"Realistische verwachtingen", valueText3:"We spreken af wat we doen en wat de grenzen zijn. We beloven geen gegarandeerde posities, leads of verkopen.",
+        processEyebrow:"Onze werkwijze", processTitle:"Een helder pad van idee tot lancering.", processIntro:"Je weet wat er gebeurt, wat we van je nodig hebben en wat de volgende stap is.",
+        stepTitle1:"Kennismaken", stepText1:"We bespreken je bedrijf, doelgroep, doelen en budget.", stepTitle2:"Plannen", stepText2:"We spreken de werkzaamheden, pagina-indeling, content en planning af.",
+        stepTitle3:"Ontwerpen en bouwen", stepText3:"We delen de voortgang, bekijken het werk samen en testen de website.", stepTitle4:"Voorbereiden op lancering", stepText4:"We doen de laatste controles en maken het afgesproken werk klaar voor lancering.",
+        faqEyebrow:"Goed om te weten", faqTitle:"Samenwerken.", faqQ1:"Voor wie werken jullie?", faqA1:"We werken met kleine bedrijven en zelfstandige professionals die een nieuwe website nodig hebben of hun huidige website willen verbeteren.",
+        faqQ2:"Weet ik wat het kost voordat het werk begint?", faqA2:"Ja. We bespreken je wensen en sturen vooraf een voorstel met de afgesproken werkzaamheden en prijs.",
+        faqQ3:"Kunnen jullie na de lancering helpen?", faqA3:"Doorlopende ondersteuning kan als aparte dienst worden besproken en indien passend in een voorstel worden opgenomen.",
+        ctaEyebrow:"Klaar om te praten?", ctaTitle1:"Laten we een plan maken", ctaTitle2:"voor je website.", ctaText:"Vertel ons iets over je project, dan helpen we je verder.", ctaButton:"Neem contact op",
+        footerText:"Websites en digitale ondersteuning voor groeiende bedrijven."
+      },
+
+      de: {
+        skip:"Zum Inhalt springen", language:"Sprache", home:"Startseite", services:"Leistungen", pricing:"Preise", portfolio:"Portfolio", about:"Über uns", contact:"Kontakt",
+        heroEyebrow:"Über das Studio", heroTitle:"Gute Arbeit beginnt", heroEm:"mit Zuhören.", heroIntro:"Wir helfen kleinen Unternehmen mit klarem Webdesign, sorgfältiger Entwicklung und praktischer digitaler Unterstützung zu einem überzeugenden Online-Auftritt.",
+        artAlt:"Abstrakte Illustration in natürlichen, gedeckten Farben", artBadge:"MIT BEDACHT GESTALTET", aboutEyebrow:"Ein kleines Studio, persönlicher Ansatz", aboutTitle:"Gut gemachte, praktische Websites – ohne unnötigen Aufwand.",
+        aboutText1:"Eine Website sollte verständlich machen, was Sie anbieten, und den nächsten Schritt erleichtern. Wir verbinden Design und Entwicklung zu klaren Websites, die zu Ihrem Unternehmen passen.",
+        aboutText2:"Wir kommunizieren unkompliziert, vereinbaren den Umfang vor Beginn und beziehen Sie an wichtigen Stellen ein. So gibt es weniger Überraschungen und einen klaren Weg bis zum Start.",
+        projectLink:"Erzählen Sie uns von Ihrem Projekt", valuesEyebrow:"Was uns wichtig ist", valuesTitle:"Guter Prozess. Ehrliche Arbeit.", valuesIntro:"Ein gutes Projekt beginnt mit klaren Prioritäten und abgestimmten Erwartungen.",
+        valueTitle1:"Klarheit statt Fachjargon", valueText1:"Wir erklären Entscheidungen und Ergebnisse verständlich, damit Sie fundierte Entscheidungen treffen können.",
+        valueTitle2:"Für echte Menschen gestaltet", valueText2:"Wir setzen auf barrierearme, responsive Erlebnisse, die Besuchern helfen, Informationen zu finden und aktiv zu werden.",
+        valueTitle3:"Realistische Erwartungen", valueText3:"Wir vereinbaren Umfang und Grenzen. Garantierte Rankings, Anfragen oder Verkäufe versprechen wir nicht.",
+        processEyebrow:"Unser Ablauf", processTitle:"Ein klarer Weg von der Idee bis zum Start.", processIntro:"Sie wissen, was passiert, was wir von Ihnen benötigen und was als Nächstes ansteht.",
+        stepTitle1:"Verstehen", stepText1:"Wir sprechen über Ihr Unternehmen, Ihre Zielgruppe, Ziele und Ihr Budget.", stepTitle2:"Planen", stepText2:"Wir vereinbaren Umfang, Seitenstruktur, Inhalte und Zeitplan.",
+        stepTitle3:"Gestalten und entwickeln", stepText3:"Wir zeigen den Fortschritt, prüfen die Arbeit gemeinsam und testen die Website.", stepTitle4:"Start vorbereiten", stepText4:"Wir führen die letzten Prüfungen durch und bereiten die vereinbarten Arbeiten für den Start vor.",
+        faqEyebrow:"Gut zu wissen", faqTitle:"Die Zusammenarbeit.", faqQ1:"Mit wem arbeiten Sie?", faqA1:"Wir arbeiten mit kleinen Unternehmen und Selbstständigen, die eine neue Website benötigen oder ihre bestehende verbessern möchten.",
+        faqQ2:"Kenne ich den Preis vor Arbeitsbeginn?", faqA2:"Ja. Wir besprechen Ihren Bedarf und senden vor Beginn ein schriftliches Angebot mit Umfang und Preis.",
+        faqQ3:"Können Sie nach dem Start helfen?", faqA3:"Laufende Unterstützung kann als separate Leistung besprochen und bei Bedarf in ein Angebot aufgenommen werden.",
+        ctaEyebrow:"Bereit für ein Gespräch?", ctaTitle1:"Lassen Sie uns einen Plan machen", ctaTitle2:"für Ihre Website.", ctaText:"Erzählen Sie uns kurz von Ihrem Projekt – wir kümmern uns um den nächsten Schritt.", ctaButton:"Studio kontaktieren",
+        footerText:"Websites und digitale Unterstützung für wachsende Unternehmen."
+      },
+
+      fr: {
+        skip:"Aller au contenu", language:"Langue", home:"Accueil", services:"Services", pricing:"Tarifs", portfolio:"Portfolio", about:"À propos", contact:"Contact",
+        heroEyebrow:"À propos du studio", heroTitle:"Un bon projet commence", heroEm:"par l’écoute.", heroIntro:"Nous aidons les petites entreprises à créer une présence en ligne solide grâce à un design clair, un développement soigné et un accompagnement numérique pratique.",
+        artAlt:"Illustration abstraite aux couleurs naturelles et douces", artBadge:"CONÇU AVEC SOIN", aboutEyebrow:"Un petit studio, une approche personnelle", aboutTitle:"Des sites web utiles et bien conçus, sans complication.",
+        aboutText1:"Un site web doit aider les visiteurs à comprendre votre activité et à passer à l’étape suivante. Nous réunissons design et développement pour créer des sites clairs et adaptés à votre entreprise.",
+        aboutText2:"Nous communiquons clairement, définissons le périmètre avant de commencer et vous impliquons aux étapes importantes. Vous avancez ainsi avec moins de surprises, de l’idée au lancement.",
+        projectLink:"Parlez-nous de votre projet", valuesEyebrow:"Ce qui compte pour nous", valuesTitle:"Un bon processus. Un travail honnête.", valuesIntro:"Un projet réussi repose sur des priorités claires et des attentes définies dès le départ.",
+        valueTitle1:"La clarté avant le jargon", valueText1:"Nous expliquons les choix et les livrables simplement afin que vous puissiez prendre des décisions éclairées.",
+        valueTitle2:"Pensé pour les personnes", valueText2:"Nous privilégions des expériences accessibles et adaptatives qui aident les visiteurs à trouver l’information et à agir.",
+        valueTitle3:"Des attentes réalistes", valueText3:"Nous définissons le travail et ses limites. Nous ne promettons pas de classement, de prospects ou de ventes garantis.",
+        processEyebrow:"Notre méthode", processTitle:"Un parcours clair, de l’idée au lancement.", processIntro:"Vous saurez ce qui se passe, ce dont nous avons besoin et quelle est la prochaine étape.",
+        stepTitle1:"Comprendre", stepText1:"Nous discutons de votre activité, de votre public, de vos objectifs et de votre budget.", stepTitle2:"Planifier", stepText2:"Nous définissons le périmètre, la structure des pages, les contenus et le calendrier.",
+        stepTitle3:"Concevoir et développer", stepText3:"Nous partageons l’avancement, examinons le travail ensemble et testons le site.", stepTitle4:"Préparer le lancement", stepText4:"Nous effectuons les dernières vérifications et préparons le travail convenu pour le lancement.",
+        faqEyebrow:"Bon à savoir", faqTitle:"Travailler ensemble.", faqQ1:"Avec qui travaillez-vous ?", faqA1:"Nous travaillons avec de petites entreprises et des indépendants qui ont besoin d’un nouveau site ou souhaitent améliorer leur site actuel.",
+        faqQ2:"Le prix sera-t-il connu avant le début ?", faqA2:"Oui. Nous discutons de vos besoins et vous remettons une proposition écrite précisant le périmètre et le prix avant de commencer.",
+        faqQ3:"Pouvez-vous aider après le lancement ?", faqA3:"Un accompagnement continu peut être proposé séparément et inclus dans une proposition si nécessaire.",
+        ctaEyebrow:"Prêt à en parler ?", ctaTitle1:"Préparons un plan", ctaTitle2:"pour votre site web.", ctaText:"Présentez-nous votre projet et nous vous guiderons pour la suite.", ctaButton:"Contacter le studio",
+        footerText:"Sites web et accompagnement numérique pour les entreprises en croissance."
+      },
+
+      zh: {
+        skip:"跳转到正文", language:"语言", home:"首页", services:"服务", pricing:"价格", portfolio:"作品集", about:"关于", contact:"联系",
+        heroEyebrow:"关于工作室", heroTitle:"好的合作始于", heroEm:"倾听。", heroIntro:"我们通过清晰的网站设计、用心的开发和实用的数字支持，帮助小型企业建立自信的线上形象。",
+        artAlt:"采用自然柔和色彩的抽象插画", artBadge:"用心设计", aboutEyebrow:"小型工作室，个性化服务", aboutTitle:"实用、精心制作的网站，不添多余麻烦。",
+        aboutText1:"网站应帮助人们了解您的业务，并轻松采取下一步行动。我们结合设计与开发，打造清晰、周到且适合您业务的网站。",
+        aboutText2:"我们保持沟通简单明了，在开始前确认工作范围，并在重要阶段邀请您参与。这样可以减少意外，让项目从想法到上线都有清晰路径。",
+        projectLink:"告诉我们您的项目", valuesEyebrow:"我们重视什么", valuesTitle:"流程清晰，工作诚实。", valuesIntro:"好的项目从明确优先事项和事先达成共识开始。",
+        valueTitle1:"清晰胜过术语", valueText1:"我们用通俗的语言解释决定和交付内容，帮助您为网站做出明智选择。",
+        valueTitle2:"为真实用户设计", valueText2:"我们专注于易用、响应式的体验，帮助访客找到信息并采取行动。",
+        valueTitle3:"合理的预期", valueText3:"我们会约定工作内容及其边界，不承诺排名、潜在客户或销售额 гарант。",
+        processEyebrow:"我们的流程", processTitle:"从想法到上线，路径清晰。", processIntro:"您会了解项目进度、我们需要您提供什么，以及接下来要做什么。",
+        stepTitle1:"了解", stepText1:"我们讨论您的业务、受众、目标和预算。", stepTitle2:"规划", stepText2:"我们确定工作范围、页面结构、内容需求和时间安排。",
+        stepTitle3:"设计与开发", stepText3:"我们分享进度、共同审阅，并测试网站。", stepTitle4:"准备上线", stepText4:"我们完成最终检查，并将约定的工作准备就绪。",
+        faqEyebrow:"须知", faqTitle:"合作方式。", faqQ1:"您与哪些客户合作？", faqA1:"我们服务需要新网站或希望改进现有网站的小型企业和独立专业人士。",
+        faqQ2:"开始前我会知道价格吗？", faqA2:"会。我们会讨论您的需求，并在开始前提供列明工作范围和价格的书面提案。",
+        faqQ3:"上线后还能获得帮助吗？", faqA3:"后续支持可作为单独服务讨论，并在合适时列入提案。",
+        ctaEyebrow:"准备好聊聊了吗？", ctaTitle1:"让我们为您的网站", ctaTitle2:"制定一个计划。", ctaText:"告诉我们一些项目情况，我们会协助您推进下一步。", ctaButton:"联系工作室",
+        footerText:"为成长中的企业提供网站和数字支持。"
+      },
+
+      ar: {
+        skip:"انتقل إلى المحتوى", language:"اللغة", home:"الرئيسية", services:"الخدمات", pricing:"الأسعار", portfolio:"الأعمال", about:"من نحن", contact:"اتصل بنا",
+        heroEyebrow:"عن الاستوديو", heroTitle:"العمل الجيد يبدأ", heroEm:"بالإنصات.", heroIntro:"نساعد الشركات الصغيرة على بناء حضور قوي على الإنترنت من خلال تصميم واضح وتطوير مدروس ودعم رقمي عملي.",
+        artAlt:"رسم تجريدي بألوان طبيعية هادئة", artBadge:"تصميم مدروس", aboutEyebrow:"استوديو صغير ونهج شخصي", aboutTitle:"مواقع عملية ومتقنة، بلا تعقيدات إضافية.",
+        aboutText1:"ينبغي أن يساعد الموقع الناس على فهم ما تقدمه ويجعل خطوتهم التالية سهلة. نجمع بين التصميم والتطوير لإنشاء مواقع واضحة ومدروسة تناسب نشاطك.",
+        aboutText2:"نتواصل بوضوح، ونتفق على نطاق العمل قبل البدء، ونشركك في المراحل المهمة. بهذه الطريقة تقل المفاجآت ويصبح الطريق من الفكرة إلى الإطلاق أوضح.",
+        projectLink:"أخبرنا عن مشروعك", valuesEyebrow:"ما يهمنا", valuesTitle:"عملية جيدة. عمل صادق.", valuesIntro:"أفضل المشاريع تبدأ بأولويات واضحة وتوقعات متفق عليها منذ البداية.",
+        valueTitle1:"الوضوح بدل المصطلحات", valueText1:"نشرح القرارات والمخرجات بلغة بسيطة لتتمكن من اتخاذ قرارات مدروسة بشأن موقعك.",
+        valueTitle2:"تصميم يناسب الجميع", valueText2:"نركز على تجارب سهلة الوصول ومتجاوبة تساعد الزوار على إيجاد المعلومات واتخاذ الإجراء المناسب.",
+        valueTitle3:"توقعات واقعية", valueText3:"نتفق على العمل وحدوده. ولا نعد بترتيب مضمون أو عملاء محتملين أو مبيعات مضمونة.",
+        processEyebrow:"منهج العمل", processTitle:"طريق واضح من الفكرة إلى الإطلاق.", processIntro:"ستعرف ما يجري، وما نحتاجه منك، وما الخطوة التالية.",
+        stepTitle1:"الفهم", stepText1:"نناقش نشاطك وجمهورك وأهدافك وميزانيتك.", stepTitle2:"التخطيط", stepText2:"نتفق على نطاق العمل وهيكل الصفحات والمحتوى والجدول الزمني.",
+        stepTitle3:"التصميم والبناء", stepText3:"نشارك التقدم ونراجع العمل معًا ونختبر الموقع.", stepTitle4:"الاستعداد للإطلاق", stepText4:"نجري الفحوصات النهائية ونجهز العمل المتفق عليه للإطلاق.",
+        faqEyebrow:"معلومات مهمة", faqTitle:"العمل معًا.", faqQ1:"مع من تعملون؟", faqA1:"نعمل مع الشركات الصغيرة والمهنيين المستقلين الذين يحتاجون إلى موقع جديد أو يرغبون في تحسين موقعهم الحالي.",
+        faqQ2:"هل سأعرف السعر قبل بدء العمل؟", faqA2:"نعم. نناقش احتياجاتك ونقدم عرضًا مكتوبًا يوضح نطاق العمل والسعر المتفق عليه قبل البدء.",
+        faqQ3:"هل يمكنكم المساعدة بعد الإطلاق؟", faqA3:"يمكن مناقشة الدعم المستمر كخدمة منفصلة وإضافته إلى العرض عند الحاجة.",
+        ctaEyebrow:"هل أنت مستعد للحديث؟", ctaTitle1:"لنضع خطة", ctaTitle2:"لموقعك الإلكتروني.", ctaText:"شاركنا بعض التفاصيل عن مشروعك وسنساعدك في الخطوة التالية.", ctaButton:"تواصل مع الاستوديو",
+        footerText:"مواقع إلكترونية ودعم رقمي للشركات النامية."
+      }
+    };
+
+    const selector = document.getElementById("language-select");
+
+    function setLanguage(language) {
+      const translationsForLanguage = translations[language] || translations.en;
+
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+      document.body.dir = language === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.dataset.i18n;
+        if (translationsForLanguage[key]) {
+          element.textContent = translationsForLanguage[key];
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-aria]").forEach(element => {
+        const key = element.dataset.i18nAria;
+        if (translationsForLanguage[key]) {
+          element.setAttribute("aria-label", translationsForLanguage[key]);
+        }
+      });
+
+      selector.value = language;
+      localStorage.setItem("site-language", language);
+    }
+
+    selector.addEventListener("change", event => setLanguage(event.target.value));
+
+    document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+    const savedLanguage = localStorage.getItem("site-language") || "en";
+    setLanguage(savedLanguage);
+  </script>
+</body>
+</html>
