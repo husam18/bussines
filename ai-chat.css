@@ -3,7 +3,7 @@
   right: 24px;
   bottom: 24px;
   z-index: 999;
-  font-family: var(--sans);
+  font-family: var(--sans, "DM Sans", sans-serif);
 }
 
 .ai-launcher {
@@ -15,13 +15,13 @@
   border: 0;
   border-radius: 999px;
   color: #fff;
-  background: var(--green-dark);
+  background: var(--green-dark, #26382e);
   box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
   font: 600 .9rem var(--sans);
   cursor: pointer;
 }
 
-.ai-launcher:hover { background: var(--green); }
+.ai-launcher:hover { background: var(--green, #315846); }
 .ai-launcher span { font-size: 1.2rem; }
 
 .ai-panel {
@@ -33,9 +33,9 @@
   width: min(360px, calc(100vw - 32px));
   height: 440px;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line, #deded5);
   border-radius: 14px;
-  background: var(--white);
+  background: var(--white, #fff);
   box-shadow: 0 14px 45px rgba(0, 0, 0, .18);
 }
 
@@ -47,7 +47,7 @@
   justify-content: space-between;
   padding: 16px;
   color: #fff;
-  background: var(--green-dark);
+  background: var(--green-dark, #26382e);
 }
 
 .ai-header strong,
@@ -89,7 +89,7 @@
 
 .ai-bot {
   align-self: flex-start;
-  color: var(--ink);
+  color: var(--ink, #252720);
   background: #f1f2ed;
 }
 
@@ -110,9 +110,9 @@
   min-width: 0;
   flex: 1;
   padding: 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line, #deded5);
   border-radius: 7px;
-  font: .85rem var(--sans);
+  font: .85rem var(--sans, "DM Sans", sans-serif);
 }
 
 .ai-form button {
@@ -120,7 +120,7 @@
   border: 0;
   border-radius: 7px;
   color: #fff;
-  background: var(--green);
+  background: var(--green, #315846);
   cursor: pointer;
 }
 
